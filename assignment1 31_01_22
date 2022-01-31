@@ -1,4 +1,4 @@
-/binary search program/
+/*binary search program*/
 #include<stdio.h> 
 int main()
 {
