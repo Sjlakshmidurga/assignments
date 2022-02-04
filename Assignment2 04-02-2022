@@ -1,0 +1,18 @@
+#include<stdio.h>
+int main()
+{
+    char s[15];
+    int i;
+    printf("Enter the string:");
+    gets(s);
+    for(i=0;s[i]!='\0';i++)
+    {
+        if(s[i]>='A' && s[i]<='Z')
+          s[i]=s[i]+32;
+        else if(s[i]>='a' && s[i]<='z')
+          s[i]=s[i]-32;
+    }
+    s[i]='\0';
+    printf("Resultant of a string is:%s",s);
+    return 0;
+}
