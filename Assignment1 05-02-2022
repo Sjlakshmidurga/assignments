@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <string.h>
+void main()
+{
+    char ch[20]; 
+    int i, n, vowel, consonant;
+    printf("Enter any string: ");
+    gets(ch);
+    vowel = 0;
+    consonant = 0;
+    n = strlen(ch);
+    for(i=0; i<n; i++)
+    {
+        if((ch[i]>='a' && ch[i]<='z') || (ch[i]>='A' && ch[i]<='Z'))
+        {
+            switch(ch[i])
+            {
+                case 'a':
+                case 'e':
+                case 'i':
+                case 'o':
+                case 'u':
+                case 'A':
+                case 'E':
+                case 'I':
+                case 'O':
+                case 'U':
+                    vowel++;
+                    break;
+                default:
+                    consonant++;
+            }
+        }
+    }
+
+    printf("Total number of vowel = %d\n", vowel);
+    printf("Total number of consonant = %d\n", consonant);
+}
