@@ -1,0 +1,75 @@
+#include<stdio.h>
+struct student
+{
+    char name[10];
+    int rollno;
+    int subject[5],total;
+    float percentage;
+    char grade;
+};
+int main ( )
+{
+    struct student s[100];
+    int n,i,j;
+    printf("Enter the number of Students: ");
+    scanf("%d",&n);
+    printf("\n student records\n");
+    for(i=0;i<n;i++)
+    {
+    printf("Enter roll no of the student: ");
+    scanf("%d",&s[i].rollno);
+    printf("Enter name of the student: ");
+    scanf("%s",s[i].name);
+    printf("Enter the Marks of Five Subjects: ");
+        printf("\nEnter student[%d] student marks",i);
+        s[i].total=0;
+        for(j=0; j<5; j++)
+        {
+            scanf("%d",&s[i].subject[j]);
+            s[i].total=s[i].total+s[i].subject[j];
+        }
+        s[i].percentage=(float)((float)s[i].total/(float)500)*100;
+        printf("total marks %d\n total percentage %.2f\n",s[i].total,s[i].percentage);
+        printf("\n");
+    }
+    for(i=0;i<n;i++)
+    {
+        if(s[i].percentage >=90)
+        {
+            printf("grade O");
+        }
+        else if(s[i].percentage>=80)
+        {
+            printf("grade A");
+        }
+        else if(s[i].percentage>=70)
+        {
+            printf("grade B");
+        }
+        else if(s[i].percentage>=60)
+        {
+            printf("grade C");
+        }
+        else if(s[i].percentage>=50)
+        {
+            printf("grade D");
+        }
+        else if(s[i].percentage>=40)
+        {
+            printf("pass");
+        }
+        else
+        {
+            printf("fail");
+        }
+    }
+    for(i =0;i<n;i++)
+    printf("\n");
+    printf("Name\tRollNo\ttotal\tpercentage\tGrade\t\n");
+    for(i = 0;i<n;i++)
+    printf("\n");
+    for(i=0;i<n;i++)
+        {
+        printf("%s\t%d\t%d\t%f\t%c\n",s[i].name,s[i].rollno,s[i].total,s[i].percentage,s[i].grade);
+   }
+}
