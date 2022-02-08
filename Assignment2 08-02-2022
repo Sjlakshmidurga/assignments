@@ -1,0 +1,14 @@
+#include<stdio.h>
+void c(int n)
+{
+    int i=0;
+   if(i<n)
+   {
+     printf("%d\n",n);
+     c(n-1);
+   }
+}
+int main()
+{
+  c(10);
+}
