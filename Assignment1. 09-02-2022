@@ -1,0 +1,20 @@
+#include<stdio.h>  
+int main()
+{  
+int a=5;        
+int *p,*p1,*p2,*p3;     
+p=&a;
+p1=&a;
+p2=&a;
+p3=&a;
+printf("Address of p variable is %u \n",p); 
+p=p+1;
+printf("After increment: Address of p variable is %u \n",p);
+p1=p1-1;
+printf("After decrement:address of p1 variable is %u \n",p1); 
+p2=p2+3;
+printf("After addition:address of p2 variable is %u \n",p2);
+p3=p3-3;
+printf("After subtraction:address of p3 variable is %u \n",p3);
+return 0;  
+}
